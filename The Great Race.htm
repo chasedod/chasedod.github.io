@@ -26,7 +26,7 @@
 
 <body>
 <p>
-<button onclick="myMove()"><img src="0572-red-green-yellow-traffic-light.jpg"/button>
+<button onclick="myMove()"><img src="0572-red-green-yellow-traffic-light.jpg"></button>
 </p> 
 <br/><br/>
 <div id ="animate1"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -35,35 +35,35 @@
 </div>
 <img src="cartoon-straight-road-clip-art-DIz1rE-clipart.jpg"/>
 <script>
-	function random()
-  {
-		var x = Math.floor(Math.random()*10);
-	}
 function myMove() {
   var elem = document.getElementById("animate1");   
-  var pos = 0;
+  //var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 350) {
+    if (randomnumber == 350) {
       clearInterval(id);
     } else {
-      pos++; 
-      elem.style.right = x + 'px'; 
-      elem.style.left = x + 'px'; 
+	var randomnumber=Math.floor(Math.random()*11)
+      randomnumber++; 
+      //pos++; 
+      elem.style.right = randomnumber + 'px'; 
+      elem.style.left = randomnumber + 'px'; 
     }
   }
  }
 function myMove() {
   var elem = document.getElementById("animate2");   
-  var pos = 0;
+  //var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == 350) {
+    if (randonnumber2 == 350) {
       clearInterval(id);
     } else {
-      pos++;
-      elem.style.right = x + 'px'; 
-      elem.style.left = x + 'px'; 
+		var randomnumber2=Math.floor(Math.random()*11)
+      randomnumber2++; 
+      //pos++;
+      elem.style.right = randomnumber2 + 'px'; 
+      elem.style.left = randomnumber2 + 'px'; 
     }
   }
  }
