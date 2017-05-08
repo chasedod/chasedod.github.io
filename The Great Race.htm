@@ -26,14 +26,14 @@
 
 <body>
 <p>
-<button onclick="myMove()"><img src="Red-Light1.png" id="red light"></button>
+<button onclick="startRace()"><img src="Red-Light1.png" id="red light"></button>
 </p> 
 <br/><br/>
 <div id ="animate1"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div id ="animate2">
 </div>
 </div>
-<img src="cartoon-straight-road-clip-art-DIz1rE-clipart.jpg"/>
+<img src="cartoon-straight-road-clip-art-DIz1rE-clipart.jpg" id="Road"/>
 <script>
 function startRace(){
 	
@@ -51,12 +51,15 @@ function startRace(){
 function moveRacer(racerID){
 	
 	// TO DO: move the racer whose ID was passed to the function
-	//Also how would you move the racer depending on the ID passed?
+	var elem = document.getElementById(racerID);
+	var pos = 0;
+	pos++;
+	elem.style.right = pos + 'px';
+	elem.style.left = pos +'px';
 	// TO DO: check if that racer has crossed the finish line;  if yes, call the stopRace function passing the winner's ID
 	
-	If //how would you check to see if the racer has crossed the finish line? {
-		stopRace('animate1');
-		stopRace('animate2');
+	If pos== outerWidth="road" {
+		stopRace('racerId');
 	}
 }
 
@@ -65,15 +68,15 @@ function stopRace(racerID){
 	// TO DO: Stop the timer from moving the racers
 	// HINT:  pass the intervalTimer variable to clearInterval()
 	
-	clearTimeout(intervalTimer);
+	clearInterval((intervalTimer);
 	
 	// TO DO: swap green light traffic image for red light traffic image
 	
-	document.getElementById(red light);
+	var getredlight = document.getElementbyid("green light").src ="Red-Light1.png";
 	
 	// TO DO: The instructions say to show a winner image. However, if you thought it was OK you could also use the alert() function to show a pop up alert. 
 	
-	alert("The winner is"); //How would you determine the winner in the alert message?
+	alert("The winner is" racerID); //How would you determine the winner in the alert message?
 	
 	// TO DO: move racers back to the starting line
 	startRace(); //I am not sure if this is right or not.
