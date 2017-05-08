@@ -26,7 +26,7 @@
 
 <body>
 <p>
-<button onclick="myMove()"><img src="0572-red-green-yellow-traffic-light.jpg"></button>
+<button onclick="myMove()"><img src="Red-Light1.png" id="red light"></button>
 </p> 
 <br/><br/>
 <div id ="animate1"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
@@ -35,38 +35,49 @@
 </div>
 <img src="cartoon-straight-road-clip-art-DIz1rE-clipart.jpg"/>
 <script>
-function myMove() {
-  var elem = document.getElementById("animate1");   
-  //var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (randomnumber == 350) {
-      clearInterval(id);
-    } else {
-	var randomnumber=Math.floor(Math.random()*11)
-      randomnumber++; 
-      //pos++; 
-      elem.style.right = randomnumber + 'px'; 
-      elem.style.left = randomnumber + 'px'; 
-    }
-  }
- }
-function myMove() {
-  var elem = document.getElementById("animate2");   
-  //var pos = 0;
-  var id = setInterval(frame, 5);
-  function frame() {
-    if (randonnumber2 == 350) {
-      clearInterval(id);
-    } else {
-		var randomnumber2=Math.floor(Math.random()*11)
-      randomnumber2++; 
-      //pos++;
-      elem.style.right = randomnumber2 + 'px'; 
-      elem.style.left = randomnumber2 + 'px'; 
-    }
-  }
- }
+function startRace(){
+	
+	// TO DO: swap red light traffic light image for green light traffic light image
+	// HINT:  Add ID to img element then use document.getElementById("YourIMGID").src = "NEWImageSRC"
+	var getgreenlight = document.getElementbyid("red light").src ="traffic-light-green-clip-art-at-clker-com-vector-clip-art-online-Xmo7PS-clipart.png"
+	// Interval to fire event every half second
+	var intervalTimer = setInterval(function(){
+			moveRacer('animate1');
+			moveRacer('animate2');
+		}, 500);
+
+}
+
+function moveRacer(racerID){
+	
+	// TO DO: move the racer whose ID was passed to the function
+	//Also how would you move the racer depending on the ID passed?
+	// TO DO: check if that racer has crossed the finish line;  if yes, call the stopRace function passing the winner's ID
+	
+	If //how would you check to see if the racer has crossed the finish line? {
+		stopRace('animate1');
+		stopRace('animate2');
+	}
+}
+
+function stopRace(racerID){
+	
+	// TO DO: Stop the timer from moving the racers
+	// HINT:  pass the intervalTimer variable to clearInterval()
+	
+	clearTimeout(intervalTimer);
+	
+	// TO DO: swap green light traffic image for red light traffic image
+	
+	document.getElementById(red light);
+	
+	// TO DO: The instructions say to show a winner image. However, if you thought it was OK you could also use the alert() function to show a pop up alert. 
+	
+	alert("The winner is"); //How would you determine the winner in the alert message?
+	
+	// TO DO: move racers back to the starting line
+	startRace(); //I am not sure if this is right or not.
+}
 </script>
 </body>
 </html>
