@@ -37,10 +37,8 @@
 <script>
 function startRace(){
 	
-	// TO DO: swap red light traffic light image for green light traffic light image
-	// HINT:  Add ID to img element then use document.getElementById("YourIMGID").src = "NEWImageSRC"
 	var getgreenlight = document.getElementbyid("red light").src ="traffic-light-green-clip-art-at-clker-com-vector-clip-art-online-Xmo7PS-clipart.png"
-	// Interval to fire event every half second
+	
 	var intervalTimer = setInterval(function(){
 			moveRacer('animate1');
 			moveRacer('animate2');
@@ -50,13 +48,13 @@ function startRace(){
 
 function moveRacer(racerID){
 	
-	// TO DO: move the racer whose ID was passed to the function
+	
 	var elem = document.getElementById(racerID);
 	var pos = 0;
 	pos++;
 	elem.style.right = pos + 'px';
 	elem.style.left = pos +'px';
-	// TO DO: check if that racer has crossed the finish line;  if yes, call the stopRace function passing the winner's ID
+	
 	
 	If pos== outerWidth="road" {
 		stopRace('racerId');
@@ -65,21 +63,20 @@ function moveRacer(racerID){
 
 function stopRace(racerID){
 	
-	// TO DO: Stop the timer from moving the racers
-	// HINT:  pass the intervalTimer variable to clearInterval()
+	
 	
 	clearInterval((intervalTimer);
 	
-	// TO DO: swap green light traffic image for red light traffic image
+	
 	
 	var getredlight = document.getElementbyid("green light").src ="Red-Light1.png";
 	
-	// TO DO: The instructions say to show a winner image. However, if you thought it was OK you could also use the alert() function to show a pop up alert. 
+	 
 	
-	alert("The winner is" racerID); //How would you determine the winner in the alert message?
+	alert("The winner is" racerID); 
 	
-	// TO DO: move racers back to the starting line
-	startRace(); //I am not sure if this is right or not.
+	
+	startRace(); 
 }
 </script>
 </body>
